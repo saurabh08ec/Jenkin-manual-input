@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Approval') {
             steps {
-                input 'Approve !!! ready to deploy'
+                input message: 'Approve !!! ready to deploy', ok: 'Are you ready to proceed for deployment'
             }
         }
         stage('deploy') {
